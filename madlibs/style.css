@@ -1,0 +1,85 @@
+/* BASE STYLES */
+
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+.centered {
+    text-align:center;
+    margin:auto;
+}
+
+.madlibs {
+    position:absolute;
+    width:100%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+    color: grey;
+}
+
+h1 {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 28px;
+    text-align:center;
+}
+
+.btn {
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: steelblue;
+    color: white;
+    transition: background ease-in .2s;
+    cursor:pointer;
+}
+
+.btn:hover {
+    background: darkslateblue;
+}
+
+.btn--showfav:before {
+    content: 'Show Favorites';
+}
+
+.btn--showfav.toggle:before {
+    content: 'Hide Favorites';
+}
+
+/* FAVORITES PANEL */
+
+.favorites {
+    display: none;
+    background: #f6f6f6;
+    padding: 16px 28px;
+    margin-top: 21px;
+    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: 500px;
+}
+
+.favorites .title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.favorites h1 {
+    font-size: 16px;
+    text-align:left;
+}
+
+.show {
+    display:block;
+}
+
+
+
+
+
