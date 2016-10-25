@@ -5,8 +5,8 @@
 var streetNumber = ["9402", "182", "4768", "90", "857", "1345", "778"];
 var streetName = ["Oak Street", "Maple Street", "Maryland Rd.", "Mountain View Rd.", "Dill St."];
 var cityName = ["Phoenix", "Arlington", "Williamsburg", "Edisville", "Douglas", "Yorkshire", "Rollington", "San" +
-" Francisco"];
-var stateName = ["Georgia", "Florida", "New York", "Virginia", "South Carolina", "Kansas", "California"];
+" Francisco", "Pittsburg", "Vidalia"];
+var stateName = ["GA", "FL", "NY", "VA", "SC", "CA", "MD", "PA"];
 var zipCode = ["09586", "76859", "00968", "14730", "46573", "86049", "36572", "12473", "40765"];
 
 function Address() {
