@@ -24,8 +24,7 @@ function displayStartup() {
 
     // Create string for the output and print to the h1
 
-    var result = "A startup that is like " + startupX[random1] + ", but for " + startupY[random2] + ".";
-    document.getElementById("XforY").innerHTML = result;
+    document.getElementById("XforY").innerHTML = "A startup that is like " + startupX[random1] + ", but for " + startupY[random2] + ".";
 }
 
 // Clicking on a button will place the madlib saying in the h1 tag
@@ -34,13 +33,13 @@ document.getElementById("button").onclick = displayStartup;
 
 // Clicking on "favorite" will save the saying into a favorites bucket
 
+var favoriteStartups = [];
+document.getElementById("favoriteList").innerHTML = favoriteStartups;
+
 function saveStartup() {
-    var favoriteStartups = [];
-    for ( var i = 0; i < favoriteStartups.length; i++ ) {
-        var favoriteElement = document.getElementById("XforY").innerHTML = result;
-        favoriteStartups.push( favoriteElement );
-        document.getElementById("favoriteList").innerHTML = favoriteStartups[i];
-    }
+    favoriteStartups.push(document.getElementById("XforY").innerHTML);
+    var favoriteFinalString = favoriteStartups.join("<br>");
+    document.getElementById("favoriteList").innerHTML = favoriteFinalString;
 }
 
 document.getElementById("favorite").onclick = saveStartup;
