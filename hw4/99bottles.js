@@ -13,22 +13,25 @@ function ninetyNineBottles() {
 
         // Start with this number, which will be defined by what number was passed through the function
         var bottles = number;
+        var beer = "<img src='beer-flat.png' width='30'>";
 
         // Common Verse
-        var bottlesOfBeer1 = " bottles of beer on the wall, ", bottlesOfBeer2 = " bottles of" +
-                " beer.",
-            bottlesOfBeer3 = " bottles of beer on the wall.", takeOne = " Take one down and pass it" +
+        var bottlesOfBeer1 = " bottles of " + beer + " on the wall, ", bottlesOfBeer2 = " bottles of " +
+               beer + " .",
+            bottlesOfBeer3 = " bottles of " + beer + " on the wall.", takeOne = " Take one down and pass it" +
                 " around, ";
 
         // Single Verse
-        var bottlesOfBeerSingle1 = " bottle of beer on the wall, ", bottlesOfBeerSingle2 = " bottle of" +
-                " beer.", bottlesOfBeerSingle3 =  " bottle of beer on the wall.",
-            noMore = "no more bottles of beer on the wall";
+        var bottlesOfBeerSingle1 = " bottle of " + beer + " on the wall, ", bottlesOfBeerSingle2 = " bottle of" +
+                beer + " .", bottlesOfBeerSingle3 =  " bottle of " + beer + " on the wall.",
+            noMore = "no more bottles of " + beer + " on the wall";
 
         // No more bottles
 
-        var noMoreBottles = "No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some" +
-            " more, 99 bottles of beer on the wall.";
+        var noMoreBottles = "No more bottles of " + beer + " on the wall, no more bottles of " + beer + ". Go to the" +
+        " store and" +
+        " buy some" +
+            " more, 99 bottles of " + beer + " on the wall.";
 
         if (number > 2) {
 
