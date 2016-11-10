@@ -54,9 +54,8 @@ function ninetyNineBottles() {
 
     for ( var i = 99; i >= 0; i--) {
         var li = document.createElement("li");
-        var finishedLyrics = document.createTextNode(bottlesOfBeer(i));
-        li.appendChild(finishedLyrics);
-        document.getElementById("99bottles").appendChild(li);
+        li.innerHTML = bottlesOfBeer(i);
+        $("#99bottles").append(li);
     }
 }
 
