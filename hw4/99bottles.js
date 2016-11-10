@@ -55,7 +55,7 @@ function ninetyNineBottles() {
     for ( var i = 99; i >= 0; i--) {
         var li = document.createElement("li");
         li.innerHTML = bottlesOfBeer(i);
-        $("#99bottles").append(li);
+        $("ul").append(li);
     }
 }
 
