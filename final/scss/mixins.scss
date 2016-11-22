@@ -1,0 +1,85 @@
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint--sm) and (max-width: $brkpoint--md) {
+      @content;
+    }
+  }
+  @else if $break == "small-md" {
+    @media (min-width: $brkpoint--md) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint--md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $brkpoint--lg) {
+      @content;
+    }
+  }
+  @else if $break == "x-large" {
+    @media (min-width: $brkpoint--xl) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be retrieved for `#{$break}`. "
+  }
+}
+
+@mixin flexColumns($numPerRow, $margin) {
+  -webkit-flex: 0 ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  -ms-flex: 0 ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  flex: 0 ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-right: $margin;
+    @include mq(small) {
+      margin-left: 0;
+      margin-right:0;
+    }
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+  }
+}
+
+/* -- FLEXBOX  MIXINS --*/
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin flex-direction($values) {
+  -webkit-flex-direction: $values;
+  -ms-flex-direction: $values;
+  flex-direction: $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin flow($wrapstyle) {
+  -webkit-flex-flow: $wrapstyle;
+  -moz-flex-flow: $wrapstyle;
+  -ms-flex-flow: $wrapstyle;
+  flex-flow: $wrapstyle;
+}
+/* -- END FLEXBOX MIXINS --*/

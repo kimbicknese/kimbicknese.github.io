@@ -1,0 +1,32 @@
+.card {
+  background: $white;
+  border-radius: $br--default;
+  box-shadow: $box-shadow;
+  &-wrap {
+    padding: $base-padding;
+  }
+  &-header {
+    font-size: $type-h4;
+    margin-bottom: $base-margin;
+  }
+}
+
+.card--property {
+  @extend .card;
+  width: 100%;
+  margin-bottom: $base-margin;
+  .price {
+    font-size: $type-h4;
+    span {
+      font-size: $type-small;
+      text-transform: uppercase;
+      color: $mantis-green;
+      margin-left: $base-margin;
+    }
+  }
+  .stats {
+  }
+  .mls {
+    font-size: $type-xsmall;
+  }
+}

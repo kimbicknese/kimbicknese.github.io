@@ -1,0 +1,56 @@
+.header {
+  background: $white;
+  width: 100%;
+  position:relative;
+  padding: $base-padding-xsmall $base-padding-medium;
+  border-bottom: 1px solid $light-grey;
+  display:table;
+  .header-logo {
+    width: 10%;
+    display:table-cell;
+    vertical-align:middle;
+    img {
+      max-height: 86px;
+      @include mq(small) {
+        display:none;
+      }
+    }
+  }
+  .header-navigation {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:left;
+    .nav {
+      .nav__item {
+        padding: 0 $base-padding-small;
+        display:inline-block;
+        a {
+          color: $black;
+          font-size: 14px;
+          font-family: $font-family--primary;
+          padding: 0 0 5px;
+          transition: color .2s ease-in-out;
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+  }
+  .header-signin {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:right;
+    width: 20%;
+  }
+  @include mq(small) {
+    background: $white;
+    margin-top: 0px;
+    position: relative;
+    padding: 5px;
+    .header-logo {
+      width: 100%;
+    }
+  }
+}

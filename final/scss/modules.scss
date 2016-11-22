@@ -1,0 +1,465 @@
+/* BASE STYLING */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: $white;
+  font-family: $font-family--primary;
+  line-height: $base__line;
+  font-size: $base-type;
+  color: $black;
+  margin:0;
+}
+
+h1 {
+  color: $black;
+  font-weight: $font-weight--light;
+  font-size: $type-h1;
+  font-family: $font-family--primary;
+  margin: $base-margin 0;
+  @include mq(small) {
+    font-size: $type-h2;
+  }
+}
+
+h2, .h1 {
+  color: $black;
+  font-weight: $font-weight--medium;
+  font-size: $type-h2;
+  font-family: $font-family--primary;
+  margin: $base-margin 0;
+  @include mq(small) {
+    font-size: $type-h3;
+    font-weight: $font-weight--medium;
+  }
+}
+
+h3 {
+  font-size: $type-h3;
+  color: $black;
+  font-weight: 400;
+  margin: $base-margin 0;
+}
+
+h4 {
+  color: $grey;
+  font-weight: $font-weight--medium;
+  font-size: $type-h4;
+  margin: $base-margin 0;
+}
+
+.small-title {
+  color: $grey;
+  font-size: $type-small;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text {
+  &-center {
+    text-align:center;
+  }
+  &-left {
+    text-align:left;
+  }
+  &-right {
+    text-align:right;
+  }
+  &-lowercase {
+    text-transform:lowercase;
+  }
+  &-uppercase {
+    text-transform:uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}
+
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  font-weight: $font-weight--medium;
+  cursor: pointer;
+}
+
+img.align-left {
+  margin-right: $base-padding;
+}
+
+img.align-right {
+  margin-left: $base-padding;
+}
+
+object.align-left {
+  margin-right: $base-padding;
+}
+
+object.align-right {
+  margin-left: $base-padding;
+}
+
+.pull-right {
+  text-align: right;
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Form elements
+
+input,
+textarea {
+  display: block;
+  padding: $base-padding-small;
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+
+input::-webkit-input-placeholder {
+  color: $grey;
+}
+
+// Button
+
+button {
+  outline: 0;
+}
+
+select {
+  background: white url('img/caret2.png') no-repeat;
+  background-size: 21px;
+  background-position: right center;
+  padding: 12px 21px 12px 12px;
+  border: 1px solid $base-border-color;
+  margin-bottom: $base-margin;
+  border-radius: $br--default;
+  line-height: initial;
+  -webkit-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+hr {
+  border: 1px solid $light-grey;
+  margin: $base-margin 0;
+}
+
+/* FLEX GRID */
+
+.grid {
+  max-width: $g-cont-max-w;
+  margin:auto;
+}
+
+/* Vertically Aligned Centered */
+
+.grid__centered {
+  align-items:center;
+}
+
+$grid-gutter: 1%;
+
+.grid__flex {
+  @include flexbox();
+  justify-content: flex-start;
+  @include flow(row wrap);
+  margin: 0;
+  max-width: $g-cont-max-w;
+  @include mq(small) {
+    display:block;
+    margin:auto;
+
+  }
+  &.no-max-width {
+    max-width: 100%;
+  }
+
+  /* No Left/Right Margin on Mobile (mainly for property cards) */
+
+  &.no-margin-mobile {
+    @include mq(small) {
+      margin-right: -$base-margin-medium;
+      margin-left: -$base-margin-medium;
+    }
+  }
+  /* Even Columns */
+
+  &.grid__2col {
+    > div {
+      @include flexColumns(2, 0);
+    }
+  }
+  &.grid__3col {
+    > div {
+      @include flexColumns(3, 0);
+    }
+  }
+  &.grid__4col {
+    > div {
+      @include flexColumns(4, 0);
+    }
+  }
+
+  /* Left Sidebar */
+
+  &.grid__1of6 {
+    > div {
+      @include flex(1);
+      &:first-of-type {
+        @include flex(0 16.6666%);
+      }
+    }
+  }
+  &.grid__1of4 {
+    > div {
+      @include flex(1);
+      &:first-of-type {
+        @include flex(0 25%);
+      }
+    }
+  }
+  &.grid__1of3 {
+    > div {
+      @include flex(1);
+      &:first-of-type {
+        @include flex(0 33.3333%);
+      }
+    }
+  }
+
+  /* Right Sidebar */
+
+  &.grid__1of6--right {
+    > div {
+      @include flex(1);
+      margin-left: 0;
+      &:last-of-type {
+        @include flex(0 16.6666%);
+        margin-left: $grid-gutter;
+      }
+    }
+  }
+  &.grid__1of4--right {
+    > div {
+      @include flex(1);
+      margin-left: 0;
+      &:last-of-type {
+        @include flex(0 25%);
+        margin-left:$grid-gutter;
+      }
+    }
+  }
+  &.grid__1of3--right {
+    > div {
+      @include flex(1);
+      margin-left: 0;
+      &:last-of-type {
+        @include flex(0 33.3333%);
+        margin-left:$grid-gutter;
+      }
+    }
+  }
+
+  &--gutter {
+    @include flexbox();
+    justify-content: flex-start;
+    @include flow(row wrap);
+    margin: 0 auto $grid-gutter auto;
+    max-width: $g-cont-max-w;
+    @include mq(small) {
+      display:block;
+      margin:auto;
+      > div {
+        width: 100%;
+        margin-left:0;
+        margin-right:0;
+      }
+      &.no-collapse-mobile {
+        display:flex;
+        > div {
+          width: auto;
+        }
+      }
+    }
+    &.no-max-width {
+      max-width: 100%;
+
+    }
+    /* No Left/Right Margin on Mobile (mainly for property cards) */
+
+    &.no-margin-mobile {
+      @include mq(small) {
+        margin-right: -$base-margin-medium;
+        margin-left: -$base-margin-medium;
+      }
+    }
+
+    &.no-bottom-margin {
+      margin-bottom: 0;
+    }
+
+    /* No Defined Columns */
+
+    &.grid__fluidcol {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+      }
+    }
+
+    /* Even Columns */
+
+    &.grid__2col {
+      > div {
+        @include flexColumns(2, $grid-gutter);
+      }
+    }
+    &.grid__3col {
+      > div {
+        @include flexColumns(3, $grid-gutter);
+      }
+    }
+    &.grid__4col {
+      > div {
+        @include flexColumns(4, $grid-gutter);
+      }
+    }
+
+    /* Left Sidebar */
+
+    &.grid__1of6 {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:first-of-type {
+          @include flex(0 calc(16.6666% - #{$grid-gutter}));
+        }
+        &:last-of-type {
+          margin-right:0;
+        }
+      }
+    }
+    &.grid__1of4 {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:first-of-type {
+          @include flex(0 calc(25% - #{$grid-gutter}));
+        }
+        &:last-of-type {
+          margin-right:0;
+        }
+      }
+    }
+    &.grid__1of3 {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:first-of-type {
+          @include flex(0 calc(33.3333% - #{$grid-gutter}));
+        }
+        &:last-of-type {
+          margin-right:0;
+        }
+      }
+    }
+    &.grid__2of3 {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:first-of-type {
+          @include flex(0 calc(66.6666% - #{$grid-gutter}));
+        }
+        &:last-of-type {
+          margin-right:0;
+        }
+      }
+    }
+
+    /* Right Sidebar */
+
+    &.grid__1of6--right {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:last-of-type {
+          @include flex(0 calc(16.6666% - #{$grid-gutter}));
+          margin-right:0;
+        }
+      }
+    }
+    &.grid__1of4--right {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:last-of-type {
+          @include flex(0 calc(25% - #{$grid-gutter}));
+          margin-right: 0;
+        }
+      }
+    }
+    &.grid__1of3--right {
+      > div {
+        @include flex(1);
+        margin-right: $grid-gutter;
+        &:last-of-type {
+          @include flex(0 calc(33.3333% - #{$grid-gutter}));
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/* BUTTONS */
+
+%button {
+  padding: $base-padding-small $base-padding-medium;
+  text-transform: uppercase;
+  font-size: $type-small;
+  text-align:center;
+  border-radius: $br--default;
+}
+
+.btn--default {
+  @extend %button;
+  background: $color-primary;
+  color: $white;
+  transition: background .2s ease-in-out;
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+}
+
+/* FORMS */
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: $base-padding-small;
+  font-size: $base-type;
+  color: $grey;
+  margin-bottom: $base-margin;
+  background-color: $white;
+  border: 1px solid $base-border-color;
+  border-radius: $br--default;
+}
