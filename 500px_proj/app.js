@@ -39,6 +39,8 @@ $(function() {
                             var element = $('<img>').attr('src', this.image_url).addClass('image');
                             $('.images').append(element);
                         });
+
+                        console.log(response);
                     }
                 });
             });
