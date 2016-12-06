@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab65d1a-c657-45c7-b47a-93a39046c24b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdevfeedr2/index.html" afterPath="$PROJECT_DIR$/jsdevfeedr2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdevfeedr2/js/app.js" afterPath="$PROJECT_DIR$/jsdevfeedr2/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdevfeedr2/styles/style.css" afterPath="$PROJECT_DIR$/jsdevfeedr2/styles/style.css" />
     </list>
     <ignored path="kimbicknese.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jsdevfeedr2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="49" selection-end-column="14" />
+            <state relative-caret-position="255">
+              <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -48,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jsdevfeedr2/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+            <state relative-caret-position="530">
+              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -454,12 +452,12 @@
       <workItem from="1480625573229" duration="4809000" />
       <workItem from="1480774225342" duration="4654000" />
       <workItem from="1480870034767" duration="10325000" />
-      <workItem from="1481058847630" duration="2057000" />
+      <workItem from="1481058847630" duration="2965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157999000" />
+    <option name="totallyTimeSpent" value="158907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="24" width="1399" height="798" extended-state="0" />
@@ -856,18 +854,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsdevfeedr2/index.html">
+    <entry file="file://$PROJECT_DIR$/jsdevfeedr2/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="49" selection-end-column="14" />
+        <state relative-caret-position="530">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsdevfeedr2/js/app.js">
+    <entry file="file://$PROJECT_DIR$/jsdevfeedr2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="255">
+          <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
           <folding />
         </state>
       </provider>

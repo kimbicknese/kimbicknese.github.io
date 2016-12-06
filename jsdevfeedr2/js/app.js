@@ -74,8 +74,7 @@ function CNN() {
                     });
                     $(".closePopUp").click(function() {
                         $("#popUp").removeClass("display");
-                    })
-
+                    });
                 });
             });
 
