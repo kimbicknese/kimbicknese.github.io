@@ -57,6 +57,9 @@
   background: #fff;
 }
 
+.display {
+  display:block !important;
+}
 /* Header styles */
 header {
   background-color: #FE052C;

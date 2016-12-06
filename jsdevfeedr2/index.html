@@ -23,7 +23,7 @@
             <a href="#"><h1>Feedr</h1></a>
             <nav>
               <ul>
-                <li><a href="#">News Source: <span>Source Name</span></a>
+                <li><a href="#">News Source: <span id="sourceName">Source Name</span></a>
                   <ul>
                       <li><a href="#" id="cnnArticles">CNN</a></li>
                       <li><a href="#" id="nytArticles">New York Times</a></li>
@@ -55,13 +55,28 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/app.js"></script>
+        <script id="articlePopup" type="text/x-handlebars-template">
+            <article class="article">
+                <section class="featuredImage">
+                    <img src="{{articleImage}}" alt="" />
+                </section>
+                <section class="articleContent">
+                    <a href="#" class="articlePopup"><h3>{{articleTitle}}</h3></a>
+                    <h6>{{articleSection}}</h6>
+                </section>
+                <section class="impressions">
+                    526
+                </section>
+                <div class="clearfix"></div>
+            </article>
+        </script>
         <script id="handlebar-template" type="text/x-handlebars-template">
             <article class="article">
                 <section class="featuredImage">
                     <img src="{{articleImage}}" alt="" />
                 </section>
                 <section class="articleContent">
-                    <a href="{{articleURL}}"><h3>{{articleTitle}}</h3></a>
+                    <a href="#" class="articlePopup"><h3>{{articleTitle}}</h3></a>
                     <h6>{{articleSection}}</h6>
                 </section>
                 <section class="impressions">
@@ -76,7 +91,7 @@
                     <img src="{{articleImage}}" alt="" />
                 </section>
                 <section class="articleContent">
-                    <a href="{{articleURL}}"><h3>{{articleTitle}}</h3></a>
+                    <a href="#" id="articlePopup2"><h3>{{articleTitle}}</h3></a>
                     <h6>{{articleSection}}</h6>
                 </section>
                 <section class="impressions">
