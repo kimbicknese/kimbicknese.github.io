@@ -59,6 +59,25 @@
                         </select>
                     </div>
                 </div>
+                <div class="filter-panel">
+                    <div class="grid__flex--gutter grid__3col">
+                        <div>
+                            <select class="form-control">
+                                <option>Beds</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-control">
+                                <option>Baths</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-control">
+                                <option>Price</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <div class="search-actions">
                     <a class="btn--search" id="savedSearch"><span class="icon-star-empty"></span></a>
                     <a class="btn--search" id="searchFilters"><span class="icon-filter"></span></a>
@@ -77,70 +96,6 @@
                     </div>
                 </div>
 
-                <!-- START PROPERTY ROWS -->
-
-                <a href="" style="color:#252928">
-                    <div class="card--property">
-                        <div class="grid__flex--gutter grid__1of3 no-bottom-margin">
-                            <div style="background:
-                            url('http://cdn.resize.sparkplatform.com/az/1024x768/true/20160912233252263602000000-o.jpg '); background-size: cover;">
-
-                            </div>
-                            <div class="card-wrap">
-                                <div class="price">$150,000 <span>ACTIVE</span></div>
-                                <p>
-                                    <b>1294 Fair Oaks St</b><br>
-                                    Atlanta, GA 30309
-                                </p>
-                                <div class="mls">
-                                    Listing provided by MLS Listings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" style="color:#252928">
-                    <div class="card--property">
-                        <div class="grid__flex--gutter grid__1of3 no-bottom-margin">
-                            <div style="background:
-                            url('http://cdn.resize.sparkplatform.com/az/1024x768/true/20160912233252263602000000-o.jpg '); background-size: cover;">
-
-                            </div>
-                            <div class="card-wrap">
-                                <div class="price">$150,000 <span>ACTIVE</span></div>
-                                <p>
-                                    <b>1294 Fair Oaks St</b><br>
-                                    Atlanta, GA 30309
-                                </p>
-                                <div class="mls">
-                                    Listing provided by MLS Listings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" style="color:#252928">
-                    <div class="card--property">
-                        <div class="grid__flex--gutter grid__1of3 no-bottom-margin">
-                            <div style="background:
-                            url('http://cdn.resize.sparkplatform.com/az/1024x768/true/20160912233252263602000000-o.jpg '); background-size: cover;">
-
-                            </div>
-                            <div class="card-wrap">
-                                <div class="price">$150,000 <span>ACTIVE</span></div>
-                                <p>
-                                    <b>1294 Fair Oaks St</b><br>
-                                    Atlanta, GA 30309
-                                </p>
-                                <div class="mls">
-                                    Listing provided by MLS Listings
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-
             </div>
         </div>
         <div class="search-map" id="map">
@@ -149,6 +104,7 @@
     </div>
 
 
+<script type="text/javascript" src="js/properties.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script	src="js/scripts.js" type="text/javascript"></script>
 <script>
@@ -162,24 +118,30 @@
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKvjSzfjlXxFW05pDqRME8f1JFjgNI_Qk&callback=initMap" async defer></script>
-<!--<script id="handlebar-template" type="text/x-handlebars-template">
-    <div class="card--property">
-        <div class="address">
-            {{address}}
+<script id="properties" type="text/x-handlebars-template">
+    <a href="" style="color:#252928">
+        <div class="card--property">
+            <div class="grid__flex--gutter grid__1of3 no-bottom-margin">
+                <div style="background:
+                            url('{{image}}'); background-size: cover;">
+
+                </div>
+                <div class="card-wrap">
+                    <div class="price">{{price}} <span>{{status}}</span></div>
+                    <p>
+                        <b>{{address}}</b><br>
+                        {{city}}, {{state}} {{zipcode}}
+                    </p>
+                    <div class="mls">
+                        Listing provided by MLS Listings
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>
-            {{info}}
-        </p>
-    </div>
+    </a>
 </script>
 <script>
-    var source = $("#handlebar-template").html();
-    var template = Handlebars.compile(source);
 
-    var property = {address: "123 Address St.", info: "3 beds, 2 baths"};
-    var html = template(property);
-
-    $("body").append(html);
-</script>-->
+</script>
 </body>
 </html>
