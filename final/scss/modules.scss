@@ -450,6 +450,19 @@ $grid-gutter: 1%;
   }
 }
 
+.btn--checkbox {
+  @extend %button;
+  background: $white;
+  color: $black;
+  cursor: pointer;
+  border: 1px solid $light-grey;
+  transition: background .2s ease-in-out;
+  margin: 2px 0;
+  &:hover {
+    background: $light-grey;
+  }
+}
+
 /* FORMS */
 
 .form-control {
